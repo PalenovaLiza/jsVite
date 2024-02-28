@@ -119,7 +119,7 @@ import './style.scss'
   let res_1 =Math.floor(res)
  console.log("Вы можете купить", res_1)
   console.log("Ваша здача составит", summa - shoko*res_1)
-  //  как посчитать сдачу??????
+  //  так можно  посчитать сдачу??????
   
 
 
