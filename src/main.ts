@@ -113,10 +113,12 @@ import './style.scss'
   const MB_IN_GB =1024
   console.log(gb*MB_IN_GB/820)
   // Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.
-  let summa = 113
-  let shoko =13
-  console.log("Вы можете купить",summa/shoko)
-  console.log("Ваша здача составит", summa - shoko*(summa/shoko))
+  let summa = 555
+  let shoko = 7
+  let res = summa/shoko
+  let res_1 =Math.floor(res)
+ console.log("Вы можете купить", res_1)
+  console.log("Ваша здача составит", summa - shoko*res_1)
   //  как посчитать сдачу??????
   
 
