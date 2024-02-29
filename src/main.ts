@@ -323,3 +323,66 @@ if (pokupka >= 200 && pokupka <= 300) {
 }else{
   console.log('Извини,брат,для тебя нет скидки')
 }
+
+// Вычислите значения выражения '2+2'
+let text = 9
+if(text == 4){
+  console.log('Правильно!',)
+}else{
+  console.log('Подумай ещё!')
+}
+
+
+// Вывести # столько раз, сколько указал пользователь.
+let start =0
+let userInput = 10
+let tex = ''
+while(start < userInput){
+  tex = tex + '#'
+  start ++
+}
+console.log(tex)
+
+// Запросить число и степень. Возвести число в указанную степень и вывести результат.
+let num =19
+let count =3
+let result =1
+while(count){
+  result *=num
+  count--
+}
+console.log(result)
+
+// Запросите 2 числа и найти все общие делители.
+let num1 = 75
+let num2 = 15
+tex = ''
+let min = num1 < num2 ? num1 : num2
+while(min){
+  if( num1 % min == 0 && num2 % min ==0){
+    tex += min + '_'
+  }
+  min --
+}
+console.log(tex)
+
+// Посчитать факториал введенного пользователем числа.
+let nn =5
+result =1
+while(nn){
+  if(nn>0){
+    result*=nn
+  }
+  nn --
+}
+console.log(result)
+
+// Делить число 1000 на 2 до тех пор, пока не получится число меньше 50 Вывести это число и сколько делений произвели.
+let resu = 1000
+let i =0
+ while(true){
+  resu/=2
+  i ++
+  if (resu<50) break
+}
+console.log(resu, `за ${i} итераций`)
