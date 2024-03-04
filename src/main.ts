@@ -315,40 +315,40 @@ switch (valute) {
 // Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.
 let pokupka = 345
 if (pokupka >= 200 && pokupka <= 300) {
-  console.log('Ваша сумма  со скидкой:', pokupka-(pokupka*3/100))
-}else if(pokupka >= 300 && pokupka <= 500) {
-  console.log('Ваша сумма  со скидкой:', pokupka-(pokupka*5/100))
-}else if(pokupka >= 700) {
-  console.log('Ваша сумма  со скидкой:', pokupka-(pokupka*7/100))
-}else{
+  console.log('Ваша сумма  со скидкой:', pokupka - (pokupka * 3 / 100))
+} else if (pokupka >= 300 && pokupka <= 500) {
+  console.log('Ваша сумма  со скидкой:', pokupka - (pokupka * 5 / 100))
+} else if (pokupka >= 700) {
+  console.log('Ваша сумма  со скидкой:', pokupka - (pokupka * 7 / 100))
+} else {
   console.log('Извини,брат,для тебя нет скидки')
 }
 
 // Вычислите значения выражения '2+2'
 let text = 9
-if(text == 4){
+if (text == 4) {
   console.log('Правильно!',)
-}else{
+} else {
   console.log('Подумай ещё!')
 }
 
 
 // Вывести # столько раз, сколько указал пользователь.
-let start =0
+let start = 0
 let userInput = 10
 let tex = ''
-while(start < userInput){
+while (start < userInput) {
   tex = tex + '#'
-  start ++
+  start++
 }
 console.log(tex)
 
 // Запросить число и степень. Возвести число в указанную степень и вывести результат.
-let num =19
-let count =3
-let result =1
-while(count){
-  result *=num
+let num = 19
+let count = 3
+let result = 1
+while (count) {
+  result *= num
   count--
 }
 console.log(result)
@@ -358,67 +358,61 @@ let num1 = 75
 let num2 = 15
 tex = ''
 let min = num1 < num2 ? num1 : num2
-while(min){
-  if( num1 % min == 0 && num2 % min ==0){
+while (min) {
+  if (num1 % min == 0 && num2 % min == 0) {
     tex += min + '_'
   }
-  min --
+  min--
 }
 console.log(tex)
 
 // Посчитать факториал введенного пользователем числа.
-let nn =5
-result =1
-while(nn){
-  if(nn>0){
-    result*=nn
+let nn = 5
+result = 1
+while (nn) {
+  if (nn > 0) {
+    result *= nn
   }
-  nn --
+  nn--
 }
 console.log(result)
 
 // Делить число 1000 на 2 до тех пор, пока не получится число меньше 50.Вывести это число и сколько делений произвели.
 let resu = 1000
-let i =0
- while(true){
-  resu/=2
-  i ++
-  if (resu<50) break
+let i = 0
+while (true) {
+  resu /= 2
+  i++
+  if (resu < 50) break
 }
 console.log(resu, `за ${i} итераций`)
 
 //Вывести все числа от 1 до 100, которые кратные указанному пользователем числу.
 
 let number = 9
-for(i=1; i<=100; i++ ) {
+for (i = 1; i <= 100; i++) {
   if (i % number == 0)
-  console.log(i)
+    console.log(i)
 }
 
 // Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь указывает минимальное и максимальное значения диапазона.
 let minimal = 6
 let maximum = 25
 let k = minimal
-for(minimal; minimal<=maximum ; minimal+=4){
- if(minimal <= k ) continue;
-  console.log(minimal-1)
+for (minimal; minimal <= maximum; minimal += 4) {
+  if (minimal <= k) continue;
+  console.log(minimal - 1)
 }
 // Запросить число и проверить, простое ли оно. Простое число делится без остатка только на себя и на единицу.
-let num3 = 121
-for (let g= num3;g<=num3 ;g ++){
-  if(g%2==0){
-    console.log('ООу, кажется, что-то не так')
-  } else{
-  console.log('Простое')
-}
+let num3 = 0
+for (let g = num3; g <= num3; g++) {
+  if (num3 % 2 == 0 && num3 != 2 ) {
+    console.log('Составное число')
+  } else if (num3 <= 1) {
+    console.log('Вообще не туда')
+  } else {
+    console.log('Простое число')
+  }
 }
 
-// А ЗАЧЕМ ЗДЕСЬ ЦИКЛФ? ОБЪЯСНИТЕ))))
-
-let num5 = 126
-if(num5%2==0){
-    console.log('ООу, кажется, что-то не так')
-  } else{
-  console.log('Простое')
-}
 
