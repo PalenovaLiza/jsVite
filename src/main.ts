@@ -396,14 +396,29 @@ for(i=1; i<=100; i++ ) {
 }
 
 // Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь указывает минимальное и максимальное значения диапазона.
-
-for(i=0; i<=10 ; i+=3){
- 
-  console.log(i)
+let minimal = 6
+let maximum = 25
+let k = minimal
+for(minimal; minimal<=maximum ; minimal+=4){
+ if(minimal <= k ) continue;
+  console.log(minimal-1)
 }
 // Запросить число и проверить, простое ли оно. Простое число делится без остатка только на себя и на единицу.
-for(i=2 ;i<=10;i++){
-  if(i%1===0 ) 
-  console.log(i)
+let num3 = 121
+for (let g= num3;g<=num3 ;g ++){
+  if(g%2==0){
+    console.log('ООу, кажется, что-то не так')
+  } else{
+  console.log('Простое')
+}
+}
+
+// А ЗАЧЕМ ЗДЕСЬ ЦИКЛФ? ОБЪЯСНИТЕ))))
+
+let num5 = 126
+if(num5%2==0){
+    console.log('ООу, кажется, что-то не так')
+  } else{
+  console.log('Простое')
 }
 
