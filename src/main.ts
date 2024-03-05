@@ -354,17 +354,19 @@ while (count) {
 console.log(result)
 
 // Запросите 2 числа и найти все общие делители.
-let num1 = 75
-let num2 = 15
-tex = ''
-let min = num1 < num2 ? num1 : num2
-while (min) {
-  if (num1 % min == 0 && num2 % min == 0) {
-    tex += min + '_'
+{
+  let num1 = 75
+  let num2 = 15
+  tex = ''
+  let min = num1 < num2 ? num1 : num2
+  while (min) {
+    if (num1 % min == 0 && num2 % min == 0) {
+      tex += min + '_'
+    }
+    min--
   }
-  min--
+  console.log(tex)
 }
-console.log(tex)
 
 // Посчитать факториал введенного пользователем числа.
 let nn = 5
@@ -404,9 +406,9 @@ for (minimal; minimal <= maximum; minimal += 4) {
   console.log(minimal - 1)
 }
 // Запросить число и проверить, простое ли оно. Простое число делится без остатка только на себя и на единицу.
-let num3 = 0
+let num3 = 7
 for (let g = num3; g <= num3; g++) {
-  if (num3 % 2 == 0 && num3 != 2 ) {
+  if (num3 % 2 == 0 && num3 != 2) {
     console.log('Составное число')
   } else if (num3 <= 1) {
     console.log('Вообще не туда')
@@ -417,22 +419,112 @@ for (let g = num3; g <= num3; g++) {
 // НЕ РЕШЕНО
 
 // Подсчитать сумму всех чисел в заданном пользователем диапазоне.
-let a1=2
-let a2=5
+let a1 = 2
+let a2 = 5
 let summ = 0
-while (a1<=a2){
-  summ = a1+summ
+while (a1 <= a2) {
+  summ = a1 + summ
   a1++
-} 
+}
 console.log(summ)
 // Запросить 2 числа и найти только наибольший общий делитель.
- a1 = 6
- let b1 =7
- while (a1 != 0 && b1 !=0){
- if( a1 > b1){
-a1 = a1%b1;
- }else( a1 < b1);{
-  b1 = b1%a1;
- }
+a1 = 6
+let b1 = 7
+while (a1 != 0 && b1 != 0) {
+  if (a1 > b1) {
+    a1 = a1 % b1;
+
+  } else (a1 < b1); {
+    b1 = b1 % a1;
+  }
 }
-console.log(a1+b1)
+console.log(a1 + b1)
+//  НЕ РЕШЕНО
+
+// Написать функцию, которая принимает 2 числа и возвращает меньшее из них
+function min(a = 9, b = 7) {
+  return a < b ? a : b;
+}
+console.log(min())
+
+// Написать функцию, которая возводит переданное число в указанную степень.
+function pow(x = 7, n = 5) {
+  let result = x;
+  for (let i = 1; i < n; i++) {
+    result *= x;
+  }
+  return result;
+}
+console.log(pow())
+// Написать функцию, которая принимает 2 числа и знак (+ - * /), считает пример и возвращает результат.
+function getMath(f1: number, f2: number, operator: string) {
+  switch (operator) {
+    case '+':
+      return f1 + f2;
+      break;
+    case '-':
+      return f1 - f2;
+      break;
+    case '*':
+      return f1 * f2;
+      break;
+    case '/':
+      return f1 / f2;
+      break;
+    default:
+      console.log('Повторите попытку!')
+  }
+}
+console.log(getMath(1, 4, '/'))
+
+// Написать функцию, которая проверяет, является ли переданное ей число простым.
+function getPrime(num3:number,g:number){
+  for (let g = num3; g <= num3; g++) {
+    if (num3 % 2 == 0 && num3 != 2) {
+      return ('Составное число')
+    } else if (num3 <= 1) {
+      return('Вообще не туда')
+    } else {
+      return('Простое число')
+    }
+  }
+}
+
+console.log(getPrime(8,8))
+
+
+// for (let i = 1; i <= 9;  i += 1) {
+//   for (let j = 1; j <= 9; j += 1) {
+//     console.log(`${i} x ${j} = ${i * j}`);
+//   }}
+ 
+  // Написать функцию, которая принимает число и выводит таблицу умножения для этого числа. Вызовите функцию для всех чисел от 2 до 9
+function ShowCalculator(i:number){
+  return(`
+  ${i}*1=${i}*1
+  ${i}*2=${i}*2
+  ${i}*3=${i}*3
+  ${i}*4=${i}*4
+  ${i}*5=${i}*5
+  ${i}*6=${i}*6
+  ${i}*7=${i}*7
+  ${i}*8=${i}*8
+  ${i}*9=${i}*9
+  `)
+}
+console.log(ShowCalculator(2))
+console.log(ShowCalculator(3))
+console.log(ShowCalculator(4))
+console.log(ShowCalculator(5))
+console.log(ShowCalculator(6))
+console.log(ShowCalculator(7))
+console.log(ShowCalculator(8))
+console.log(ShowCalculator(9))
+
+
+// Написать функцию, которая реализует работу оператора %.Функция принимает 2 параметра и возвращает остаток от деления первого параметра на второй. В функции использовать только + - * /, оператор % не использовать.
+  function RemainderDivision(a:number, b:number){
+    return(Math.trunc (a/b))
+  }
+console.log(RemainderDivision( 9,2))
+
