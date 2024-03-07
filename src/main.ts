@@ -536,5 +536,66 @@ function NumSumm(a = 0, a1 = 0, a2 = 0, a3 = 0, a4 = 0) {
 }
 console.log(NumSumm(9, 2, 35, 56, 8))
 
-// 
+// РЕКУРСИЯ  07.03.2024
+
+// Написать функцию, которая выводит переданное ей число задом наперед.Например: число 1234 вывести как 4321.
+function getReversNumber(n: number): number {
+  if (n < 10) {
+    return n
+  } else {
+    return +(n % 10 + '' + getReversNumber(Math.floor(n / 10)))
+  }
+}
+
+console.log(getReversNumber(1234))
+
+// Написать функцию, которая считает сумму цифр числа.Например: число 1357, сумма 1 + 3 + 5 + 7 = 16
+function getSumofDigints(n: number): number {
+  if (n < 10) {
+    return n
+  } else {
+    return n % 10 + getSumofDigints(Math.floor(n / 10))
+  }
+}
+console.log(getSumofDigints(1234))
+
+// Написать функцию, которая принимает число и выводит соответствующее количество вложенных пар круглых скобок.Например: число 4 – (((()))).
+function getBracketsPairsByNum(n: number): string {
+  if (!n) {
+    return '()'
+  } else {
+    return '(' + getBracketsPairsByNum(n - 1) + ')'
+  }
+}
+console.log(getBracketsPairsByNum(4))
+
+//  Написать функцию, которая вычисляет факториал заданного числа.
+function getFactorial(x: number): number {
+  if (x == 1) {
+    return x
+  } else {
+    return x * getFactorial(x - 1)
+  }
+}
+console.log(getFactorial(4))
+
+
+// Написать функцию, которая выводит все числа из заданного пользователем диапазона в прямом порядке. И еще одну функцию – для вывода в обратном порядке.
+function PrintAllNunberForward(a:number, b:number): void{
+  if(a>b){
+    return
+  }
+  PrintAllNunberForward(a,b-1)
+  console.log(b)
+}
+PrintAllNunberForward(1,5)
+
+function PrintAllNunberBackward(a:number, b:number): void{
+  if(a<b){
+    return
+  }
+  PrintAllNunberBackward(a,b+1)
+  console.log(b)
+}
+PrintAllNunberBackward(5,1)
 
