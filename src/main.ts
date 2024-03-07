@@ -524,7 +524,9 @@ console.log(ShowCalculator(9))
 
 // Написать функцию, которая реализует работу оператора %.Функция принимает 2 параметра и возвращает остаток от деления первого параметра на второй. В функции использовать только + - * /, оператор % не использовать.
   function RemainderDivision(a:number, b:number){
+   
     return(Math.trunc (a/b))
+
   }
 console.log(RemainderDivision( 9,2))
 
