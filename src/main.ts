@@ -585,8 +585,9 @@ function PrintAllNunberForward(a:number, b:number): void{
   if(a>b){
     return
   }
-  PrintAllNunberForward(a,b-1)
-  console.log(b)
+  console.log(a)
+  PrintAllNunberForward(a+1,b)
+ 
 }
 PrintAllNunberForward(1,5)
 
@@ -594,8 +595,9 @@ function PrintAllNunberBackward(a:number, b:number): void{
   if(a<b){
     return
   }
-  PrintAllNunberBackward(a,b+1)
   console.log(b)
+  PrintAllNunberBackward(a-1,b)
+  
 }
 PrintAllNunberBackward(5,1)
 
