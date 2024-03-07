@@ -478,7 +478,7 @@ function getMath(f1: number, f2: number, operator: string) {
 console.log(getMath(1, 4, '/'))
 
 // Написать функцию, которая проверяет, является ли переданное ей число простым.
-function PetPrime(num3: number, g: number) {
+function PetPrime(num3: number, _g: number) {
   for (let g = num3; g <= num3; g++) {
     if (num3 % 2 == 0 && num3 != 2) {
       return ('Составное число')
