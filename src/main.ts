@@ -478,29 +478,29 @@ function getMath(f1: number, f2: number, operator: string) {
 console.log(getMath(1, 4, '/'))
 
 // Написать функцию, которая проверяет, является ли переданное ей число простым.
-function getPrime(num3:number,g:number){
+function PetPrime(num3: number, g: number) {
   for (let g = num3; g <= num3; g++) {
     if (num3 % 2 == 0 && num3 != 2) {
       return ('Составное число')
     } else if (num3 <= 1) {
-      return('Вообще не туда')
+      return ('Вообще не туда')
     } else {
-      return('Простое число')
+      return ('Простое число')
     }
   }
 }
 
-console.log(getPrime(8,8))
+console.log(PetPrime(8, 8))
 
 
 // for (let i = 1; i <= 9;  i += 1) {
 //   for (let j = 1; j <= 9; j += 1) {
 //     console.log(`${i} x ${j} = ${i * j}`);
 //   }}
- 
-  // Написать функцию, которая принимает число и выводит таблицу умножения для этого числа. Вызовите функцию для всех чисел от 2 до 9
-function ShowCalculator(i:number){
-  return(`
+
+// Написать функцию, которая принимает число и выводит таблицу умножения для этого числа. Вызовите функцию для всех чисел от 2 до 9
+function ShowCalculator(i: number) {
+  return (`
   ${i}*1=${i}*1
   ${i}*2=${i}*2
   ${i}*3=${i}*3
@@ -523,10 +523,18 @@ console.log(ShowCalculator(9))
 
 
 // Написать функцию, которая реализует работу оператора %.Функция принимает 2 параметра и возвращает остаток от деления первого параметра на второй. В функции использовать только + - * /, оператор % не использовать.
-  function RemainderDivision(a:number, b:number){
-   
-    return(Math.trunc (a/b))
+function RemainderDivision(a: number, b: number) {
 
-  }
-console.log(RemainderDivision( 9,2))
+  return (Math.trunc(a / b))
+
+}
+console.log(RemainderDivision(9, 2))
+
+// Написать функцию, которая принимает от 1 до 5 чисел и возвращает их сумму.
+function NumSumm(a = 0, a1 = 0, a2 = 0, a3 = 0, a4 = 0) {
+  return a + a1 + a2 + a3 + a4
+}
+console.log(NumSumm(9, 2, 35, 56, 8))
+
+// 
 
