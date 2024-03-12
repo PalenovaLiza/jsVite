@@ -635,6 +635,30 @@ for (let key in object) {
   console.log(key)
 }
 
+//  посмотреть в коде Николая 
 
+type Fraction = {
+  numeration: number,
+  denomiration: number
+}
 
+const fraction1 = {
+  numeration: 1,
+  denomiration: 2,
+}
+const fraction2 = {
+  numeration: 3,
+  denomiration: 10,
 
+}as Fraction
+
+function transformTOCommonDenominator(fr1:Fraction,  fr2:Fraction){
+return {
+  fr1:{
+
+  },
+  fr2:{
+
+  }
+}
+}
