@@ -615,6 +615,7 @@ function multipller(num: number): string {
 }
 console.log(multipller(24))
 
+// ОБЪЕКТ 
 
 let object = {
   a: 12,
@@ -633,6 +634,7 @@ console.log(object['two words'])
 for (let key in object) {
   console.log(key)
 }
+
 
 
 
