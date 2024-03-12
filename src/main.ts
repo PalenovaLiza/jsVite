@@ -616,3 +616,23 @@ function multipller(num: number): string {
 console.log(multipller(24))
 
 
+let object = {
+  a: 12,
+  b: 2,
+  с: 1,
+ obj:{
+  z:888
+},
+'two words': 'jhgfg',
+
+} as Record<string, any> // если говорит,что имеет неявное значение 'any'
+
+console.log(object)
+console.log(object['two words'])
+
+for (let key in object) {
+  console.log(key)
+}
+
+
+
