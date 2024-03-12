@@ -581,23 +581,38 @@ console.log(getFactorial(4))
 
 
 // Написать функцию, которая выводит все числа из заданного пользователем диапазона в прямом порядке. И еще одну функцию – для вывода в обратном порядке.
-function PrintAllNunberForward(a:number, b:number): void{
-  if(a>b){
+function PrintAllNunberForward(a: number, b: number): void {
+  if (a > b) {
     return
   }
   console.log(a)
-  PrintAllNunberForward(a+1,b)
- 
-}
-PrintAllNunberForward(1,5)
+  PrintAllNunberForward(a + 1, b)
 
-function PrintAllNunberBackward(a:number, b:number): void{
-  if(a<b){
+}
+PrintAllNunberForward(1, 5)
+
+function PrintAllNunberBackward(a: number, b: number): void {
+  if (a < b) {
     return
   }
   console.log(b)
-  PrintAllNunberBackward(a-1,b)
-  
+  PrintAllNunberBackward(a - 1, b)
+
 }
-PrintAllNunberBackward(5,1)
+PrintAllNunberBackward(5, 1)
+
+// Написать функцию для вывода всех множителей переданного числа в возрастающем порядке.Например: число 18 – множители 2 * 3 * 3
+
+function multipller(num: number): string {
+  if (num == 1) {
+    return ''
+  }
+  for (let i = 2; i <= num; i++) {
+    if (num % i == 0)
+      return ('' + i + '' + multipller(num / i))
+  }
+  return ''
+}
+console.log(multipller(24))
+
 
