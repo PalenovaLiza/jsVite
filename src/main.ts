@@ -1,3 +1,4 @@
+import { Value } from 'sass'
 import './style.scss'
 
 //console.log('121')
@@ -753,7 +754,37 @@ let User = {
 }
 
 User.name = "Pete"
-delete  User.name
+delete User.name
 
-console.log (User.name)
+console.log(User.name)
+
+// Создать объект, описывающий автомобиль (производитель,модель, год выпуска, средняя скорость), и следующие функциидля работы с этим объектом.
+type Car = {
+  name:string,
+  age:number,
+  country:string,
+  speed:number,
+  avearage?:number,
+}
+
+let car:Car = {
+  name: "Omoda",
+  age: 2024,
+  country: "China",
+  speed: 100,
+}
+// // Функция для вывода на экран информации об автомобиле.
+function getCarInfo(car:Car) {
+  console.log(car.name, car.age, car.country, car.speed)
+}
+getCarInfo(car)
+// Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.Учтите, что через каждые 4 часа дороги водителю необхо-димо делать перерыв на 1 час.
+
+function timeDistance(car:Car, distance: number) {
+  const time = distance/car.speed
+  const restTime = time%4==0 ? Math.floor((distance/car.speed)/4)-1 : Math.floor((distance/car.speed)/4)
+  return time + restTime
+}
+console.log(timeDistance(car, 1600))
+
 
