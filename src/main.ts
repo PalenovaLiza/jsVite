@@ -621,10 +621,10 @@ let object = {
   a: 12,
   b: 2,
   с: 1,
- obj:{
-  z:888
-},
-'two words': 'jhgfg',
+  obj: {
+    z: 888
+  },
+  'two words': 'jhgfg',
 
 } as Record<string, any> // если говорит,что имеет неявное значение 'any'
 
@@ -637,28 +637,123 @@ for (let key in object) {
 
 //  посмотреть в коде Николая 
 
+
+
+
 type Fraction = {
-  numeration: number,
-  denomiration: number
+  numerator: number,
+  denominator: number
 }
 
-const fraction1 = {
-  numeration: 1,
-  denomiration: 2,
+const fraction1: Fraction = {
+  numerator: 1,
+  denominator: 2
 }
+
 const fraction2 = {
-  numeration: 3,
-  denomiration: 10,
+  numerator: 3,
+  denominator: 10
+} as Fraction
 
-}as Fraction
-
-function transformTOCommonDenominator(fr1:Fraction,  fr2:Fraction){
-return {
-  fr1:{
-
-  },
-  fr2:{
-
+function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+  return {
+    fr1: {
+      numerator: fr1.numerator * fr2.denominator,
+      denominator: fr1.denominator * fr2.denominator
+    },
+    fr2: {
+      numerator: fr2.numerator * fr1.denominator,
+      denominator: fr1.denominator * fr2.denominator
+    }
   }
 }
+
+// 1 Функция сложения 2 - х объектов - дробей.
+
+function getSumOfFractions(fr1: Fraction, fr2: Fraction) {
+  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  return {
+    numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+    denominator: commonFractions.fr1.denominator
+  }
 }
+
+console.log(getSumOfFractions(fraction1, fraction2))
+
+function getRedusedSumOfFractions(fr1: Fraction, fr2: Fraction) {
+  const result = getSumOfFractions(fr1, fr2)
+  return getReductedFraction(result)
+}
+
+console.log(getRedusedSumOfFractions(fraction1, fraction2))
+
+// 2 Функция вычитания 2 - х объектов - дробей.
+
+function getSubtrOfFractions(fr1: Fraction, fr2: Fraction) {
+  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  const result = {
+    numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+    denominator: commonFractions.fr1.denominator
+  }
+  return getReductedFraction(result)
+}
+
+console.log(getSubtrOfFractions(fraction1, fraction2))
+
+// 3 Функция умножения 2 - х объектов - дробей.
+
+function getMulOfFractions(fr1: Fraction, fr2: Fraction) {
+  const result = {
+    numerator: fr1.numerator * fr2.numerator,
+    denominator: fr1.denominator * fr2.denominator
+  }
+  return getReductedFraction(result)
+}
+
+console.log(getMulOfFractions(fraction1, fraction2))
+
+// 4 Функция деления 2 - х объектов - дробей.
+
+function getDivOfFractions(fr1: Fraction, fr2: Fraction) {
+  const result = {
+    numerator: fr1.numerator * fr2.denominator,
+    denominator: fr1.denominator * fr2.numerator
+  }
+  return getReductedFraction(result)
+}
+
+console.log(getDivOfFractions(fraction1, fraction2))
+
+// 5 Функция сокращения объекта - дроби.
+
+function getReductedFraction(fr: Fraction) {
+  const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+  for (let i = min; i > 1; i--) {
+    if (fr.numerator % i == 0 && fr.denominator % i == 0) {
+      fr.numerator /= i
+      fr.denominator /= i
+      return getReductedFraction(fr)
+    }
+  }
+  return fr
+}
+
+
+// Напишите код, выполнив задание из каждого пункта отдельной строкой:
+// Создайте пустой объект user.
+// Добавьте свойство name со значением John.
+// Добавьте свойство surname со значением Smith.
+// Измените значение свойства name на Pete.
+// Удалите свойство name из объекта.
+
+let User = {
+  name: "John",
+  surname: "Smith",
+
+}
+
+User.name = "Pete"
+delete  User.name
+
+console.log (User.name)
+
