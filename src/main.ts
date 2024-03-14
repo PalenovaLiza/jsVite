@@ -788,3 +788,4 @@ function timeDistance(car:Car, distance: number) {
 console.log(timeDistance(car, 1600))
 
 
+
