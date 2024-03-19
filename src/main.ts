@@ -642,40 +642,47 @@ for (let key in object) {
 
 
 type Fraction = {
-  numerator: number,
-  denominator: number
+  n: number,
+  d: number
 }
 
 const fraction1: Fraction = {
-  numerator: 1,
-  denominator: 2
+  n: 1,
+  d: 2
 }
 
 const fraction2 = {
-  numerator: 3,
-  denominator: 10
+  n: 3,
+  d: 10
 } as Fraction
 
-function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+function transformToCommond(fr1: Fraction, fr2: Fraction) {
   return {
     fr1: {
-      numerator: fr1.numerator * fr2.denominator,
-      denominator: fr1.denominator * fr2.denominator
+      n: fr1.n * fr2.d,
+      d: fr1.d * fr2.d
     },
     fr2: {
-      numerator: fr2.numerator * fr1.denominator,
-      denominator: fr1.denominator * fr2.denominator
+      n: fr2.n * fr1.d,
+      d: fr1.d * fr2.d
     }
   }
 }
 
+function transformToCommond1(n1:number,d1:number,n2:number,d2:number) {
+  console.log(n1*d2,'/',d1*d2)
+  console.log(n2*d1,'/', d1*d2)
+}
+
+transformToCommond1(1,2,3,10)
+
 // 1 Функция сложения 2 - х объектов - дробей.
 
 function getSumOfFractions(fr1: Fraction, fr2: Fraction) {
-  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  const commonFractions = transformToCommond(fr1, fr2)
   return {
-    numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
-    denominator: commonFractions.fr1.denominator
+    n: commonFractions.fr1.n + commonFractions.fr2.n,
+    d: commonFractions.fr1.d
   }
 }
 
@@ -691,10 +698,10 @@ console.log(getRedusedSumOfFractions(fraction1, fraction2))
 // 2 Функция вычитания 2 - х объектов - дробей.
 
 function getSubtrOfFractions(fr1: Fraction, fr2: Fraction) {
-  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  const commonFractions = transformToCommond(fr1, fr2)
   const result = {
-    numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
-    denominator: commonFractions.fr1.denominator
+    n: commonFractions.fr1.n - commonFractions.fr2.n,
+    d: commonFractions.fr1.d
   }
   return getReductedFraction(result)
 }
@@ -705,8 +712,8 @@ console.log(getSubtrOfFractions(fraction1, fraction2))
 
 function getMulOfFractions(fr1: Fraction, fr2: Fraction) {
   const result = {
-    numerator: fr1.numerator * fr2.numerator,
-    denominator: fr1.denominator * fr2.denominator
+    n: fr1.n * fr2.n,
+    d: fr1.d * fr2.d
   }
   return getReductedFraction(result)
 }
@@ -717,8 +724,8 @@ console.log(getMulOfFractions(fraction1, fraction2))
 
 function getDivOfFractions(fr1: Fraction, fr2: Fraction) {
   const result = {
-    numerator: fr1.numerator * fr2.denominator,
-    denominator: fr1.denominator * fr2.numerator
+    n: fr1.n * fr2.d,
+    d: fr1.d * fr2.n
   }
   return getReductedFraction(result)
 }
@@ -728,11 +735,11 @@ console.log(getDivOfFractions(fraction1, fraction2))
 // 5 Функция сокращения объекта - дроби.
 
 function getReductedFraction(fr: Fraction) {
-  const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+  const min = fr.n < fr.d ? fr.n : fr.d
   for (let i = min; i > 1; i--) {
-    if (fr.numerator % i == 0 && fr.denominator % i == 0) {
-      fr.numerator /= i
-      fr.denominator /= i
+    if (fr.n % i == 0 && fr.d % i == 0) {
+      fr.n /= i
+      fr.d /= i
       return getReductedFraction(fr)
     }
   }
@@ -750,8 +757,7 @@ function getReductedFraction(fr: Fraction) {
 let User = {
   name: "John",
   surname: "Smith",
-
-}
+} as any
 
 User.name = "Pete"
 delete User.name
@@ -778,14 +784,93 @@ function getCarInfo(car:Car) {
   console.log(car.name, car.age, car.country, car.speed)
 }
 getCarInfo(car)
-// Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.Учтите, что через каждые 4 часа дороги водителю необхо-димо делать перерыв на 1 час.
+// Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 
 function timeDistance(car:Car, distance: number) {
   const time = distance/car.speed
   const restTime = time%4==0 ? Math.floor((distance/car.speed)/4)-1 : Math.floor((distance/car.speed)/4)
   return time + restTime
 }
-console.log(timeDistance(car, 1600))
+console.log(timeDistance(car, 800))
 
 
+type Bottle = {
+  liqid: string,
+  vulume: number,
+  label: string,
+  price?: number,
+}
 
+const bottle:Bottle = {
+  liqid: 'h2o',
+  vulume: 0.5,
+  label: 'Только вода',
+} 
+
+bottle.price = 15
+
+console.log(bottle)
+
+// Создать объект, описывающий время (часы, минуты, секун-ды), и следующие функции для работы с этим объектом.
+
+type Time = {
+  hours: number,
+  minutes: number,
+  seconds: number,
+}
+
+const time:Time = {
+  hours: 11,
+  minutes: 24,
+  seconds: 12,
+}
+
+console.log (time)
+
+// 1 Функция вывода времени на экран.
+function showTimeInfo(time:Time) {
+  console.log(time)
+}
+showTimeInfo(time)
+
+// 2 Функция изменения времени на переданное количество секунд.
+function changeSeconds(time:Time, s:number) {
+  let seconds = time.seconds + s
+  // time.seconds = seconds%60
+  time.seconds = seconds>60 ? seconds%60 : seconds
+  let minutes = time.minutes + Math.trunc(seconds/60)
+  time.minutes = minutes%60
+  let hours = time.hours + Math.trunc(minutes/60)
+  time.hours = hours%24
+}
+changeSeconds(time,100)
+console.log (time)
+
+// 3 Функция изменения времени на переданное количество минут.
+function changeMinutes(time:Time, m:number) {
+  changeSeconds(time, m*60)
+}
+changeMinutes(time, 5)
+console.log (time)
+// 4 Функция изменения времени на переданное количество часов.
+function changeHours(time:Time, h:number) {
+  changeSeconds(time, h*60*60)
+}
+changeHours(time, 5)
+console.log (time)
+
+// Если бы объектов не было :(
+// function changeSecondsInTime(hours:number, minutes:number, seconds:number, s:number) {
+//   let tempSeconds = seconds + s
+//   seconds = tempSeconds>60 ? tempSeconds%60 : tempSeconds
+//   let tempMinutes = minutes + Math.trunc(tempSeconds/60)
+//   minutes = tempMinutes%60
+//   let tempHours = hours + Math.trunc(tempMinutes/60)
+//   hours = tempHours%24
+//   console.log(hours+':'+minutes+':'+seconds)
+//   return {
+//     hours, minutes, seconds
+//   }
+// }
+
+// console.log(changeSecondsInTime(11,20,30,654))
