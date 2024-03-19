@@ -773,7 +773,7 @@ let car:Car = {
   country: "China",
   speed: 100,
 }
-// // Функция для вывода на экран информации об автомобиле.
+//  Функция для вывода на экран информации об автомобиле.
 function getCarInfo(car:Car) {
   console.log(car.name, car.age, car.country, car.speed)
 }
