@@ -859,7 +859,10 @@ function changeHours(time:Time, h:number) {
 changeHours(time, 5)
 console.log (time)
 
+
+
 // Если бы объектов не было :(
+  
 // function changeSecondsInTime(hours:number, minutes:number, seconds:number, s:number) {
 //   let tempSeconds = seconds + s
 //   seconds = tempSeconds>60 ? tempSeconds%60 : tempSeconds
