@@ -902,7 +902,9 @@ SwowAllRandomNumber (randomNumber)
 
 // 2 Функция принимает массив и выводит только четные элементы.
 function EvenNumbers (randomNumber:number[]){
+for(i=0;i<randomNumber.length;i++){
   
+}
 }
   
 // 3 Функция принимает массив и возвращает сумму всех элементов массива.
