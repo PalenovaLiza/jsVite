@@ -880,3 +880,29 @@ console.log (time)
 
 
 
+//Функция для площади круга 
+
+function theAreaOfTheCircle (radius:number) {
+  const pi = 3.14
+  let area = Math.trunc(pi*radius**2)
+  return area
+}
+const CircleArea1 = theAreaOfTheCircle(4)
+console.log (CircleArea1)
+const CircleArea2 = theAreaOfTheCircle(5)
+console.log (CircleArea2)
+
+// Создать массив из 10 случайных чисел и написать несколько функций для работы с ним.
+let randomNumber = [4,6,23,57,345,9,87,94,2,6]
+// 1 Функция принимает массив и выводит его на экран.
+function SwowAllRandomNumber (randomNumber:number[]){
+console.log (randomNumber)
+} 
+SwowAllRandomNumber (randomNumber)
+
+// 2 Функция принимает массив и выводит только четные элементы.
+
+// 3 Функция принимает массив и возвращает сумму всех элементов массива.
+// 4 Функция принимает массив и возвращает его максимальный элемент.
+// 5 Функция добавления нового элемента в массив по указанному индексу.
+// 6 Функция удаления элемента из массива по указанному индексу.
