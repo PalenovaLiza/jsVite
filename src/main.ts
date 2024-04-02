@@ -915,3 +915,51 @@ SwowAllRandomNumber (randomNumber)
 // 5 Функция добавления нового элемента в массив по указанному индексу.
 // 6 Функция удаления элемента из массива по указанному индексу.
 
+
+
+// 1.1.  Написать функцию возвращающюю массив целых чисел от 0 до 10
+
+let integers = [0,1,2,3,4,5,6,7,8,9,10]
+function showIntegers (integers:number[]){
+  console.log(integers)
+}
+showIntegers(integers)
+
+//Добавить в функцию параметры опциональные параметры начального и конечного значения массива
+//(если конечный элемент массива не передат, то он больше нечального на 10) . Вызвать функцию несаколько раз
+function generateIntegers (start =0, end = start+ 10){
+return {start,end}
+}
+console.log (generateIntegers())
+console.log (generateIntegers(50))
+console.log (generateIntegers(50,100))
+
+// 1.3*. Написать функцию возвращающюю массив случайных целых чисел. Функция принимает 1 параметр, количество элементов в будущем массиве
+
+const RandomIntegers:number[] = []
+function ShowRandomIntegers (RandomIntegers:number[], length:number) {
+    for (let i=0; i<length; i++) {
+      RandomIntegers.push(Math.floor(Math.random()*10))
+    }
+  } 
+  ShowRandomIntegers(RandomIntegers,5)
+  ShowRandomIntegers(RandomIntegers,20)
+
+console.log (RandomIntegers)
+
+// 2.1. В файле html создать пустой div с произвольным id
+// 2.2. Получить объект div'а в js при помощи метода document.getElementById(ваш id) as HTMLDivElement
+// 2.3. Вывесли в полученный div текст, "Привет, пользователь"
+
+const onedivDiv = document.getElementById('onediv') as HTMLDivElement
+onedivDiv.innerHTML = `
+<p>"Привет,пользователь"</p>
+`
+// 2.4. Написать функцию, которая возвращает текст "Привет, пользователь" или 
+// "Привет, <имяПользователя>" в зависимости от переданных параметров и использовать её в задании 2.3.
+let html = ''
+function hello(name = 'пользователь'){
+  html += `<p> 'Привет,  ${name}'</p>`
+  onedivDiv.innerHTML = html
+}
+hello('Гена')
