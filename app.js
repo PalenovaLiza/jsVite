@@ -11,9 +11,9 @@
  let num42 = 10
 */
 /* Мы не можем:
-//  let 42num = 76
-//  let  my-num = 87
-//  let false = 76 
+  let 42num = 76
+ let  my-num = 87
+  let false = 76 
 */
 
 /* */
