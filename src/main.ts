@@ -963,3 +963,28 @@ function hello(name = 'пользователь'){
   onedivDiv.innerHTML = html
 }
 hello('Гена')
+
+
+// Есть массив объектов
+type Employee = {
+  name: string,
+  department: string,
+  salary: number
+} 
+const employees = [
+  { name: 'Федотова Арина Глебовна', department: 'ads', salary: 2100 },
+  { name: 'Голикова Мария Филипповна', department: 'prog', salary: 3500 },
+  { name: 'Панин Александр Германович', department: 'ads', salary: 2100 },
+  { name: 'Романов Эмиль Макарович', department: 'prog', salary: 3100 },
+  { name: 'Смирнов Никита Александрович', department: 'prog', salary: 3800 },
+  { name: 'Александрова Майя Вячеславовна', department: 'prog', salary: 4500 },
+  { name: 'Крылов Богдан Максимович', department: 'disign', salary: 2100 },
+  { name: 'Мухина Айша Константиновна', department: 'disign', salary: 2100 },
+]
+
+// Все функции вызывать несколько раз с разными параметрами
+// 3.1. Создать функцию, принимающую массив работников, и возвращающую массив уникальных отделов (department)
+// deps.includes
+// [ads, prog, disign]
+
+
