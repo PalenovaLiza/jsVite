@@ -988,3 +988,35 @@ const employees = [
 // [ads, prog, disign]
 
 
+
+
+let names = ['Аркадий','Геннадий','Семён']
+console.log (names[0])
+console.log (names[1])
+console.log (names[2])
+
+names [0] = 'Василий'
+console.log (names)
+
+names [3] = 'Елена'
+console.log (names)
+console.log (names.length)
+
+let AllArr = [
+  { name: 'Georgiy'},
+   28,
+   {country: 'Russia'}
+]
+
+console.log(AllArr[0].name)
+console.log(AllArr[1])
+console.log(AllArr.at (-1)) // ! вывод последнего элемента 
+AllArr.pop () // ! удаление элемента с конца
+console.log(AllArr)  
+AllArr.push(567) // ! добавление элемента в конец
+console.log(AllArr)
+
+
+
+
+
