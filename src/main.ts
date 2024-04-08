@@ -1010,11 +1010,92 @@ let AllArr = [
 
 console.log(AllArr[0].name)
 console.log(AllArr[1])
-console.log(AllArr.at (-1)) // ! вывод последнего элемента 
+console.log(AllArr.at (-1)) // ! удаляет и возвращает  последний элемент
 AllArr.pop () // ! удаление элемента с конца
 console.log(AllArr)  
 AllArr.push(567) // ! добавление элемента в конец
 console.log(AllArr)
+console.log (AllArr.shift()) // удалеление последнего элемента и его возврат
+AllArr.unshift('Лизавета') // добавление элемента в начало 
+console.log(AllArr)
+
+// Одним из самых старых способов перебора элементов массива является цикл for по цифровым индексам:
+for ( i = 0; i<AllArr.length;i ++){
+  console.log(AllArr[i])
+}
+
+// Но для массивов возможен и другой вариант цикла, for..of:
+
+for ( let el of AllArr){
+  console.log(el)
+}
+
+let styles = ['Джаз','Блюз']
+console.log(styles)
+styles.push ('Рок-н-ролл')
+console.log(styles)
+styles[Math.floor((styles.length - 1) / 2)] = "Классика"
+console.log(styles)
+console.log (styles.shift())
+console.log(styles)
+styles.unshift('Реп','Регги')
+console.log(styles)
+
+let IAmStrong = [34, 'Лиза', 'справится ', 'точно', 'знаю']
+IAmStrong.splice (0,1)
+console.log(IAmStrong)
+console.log (IAmStrong.splice( 0,2, 'я', 'это '))
+console.log(IAmStrong)
+
+let arr = [1, 2, 5];
+
+// начиная с индекса -1 (перед последним элементом)
+// удалить 0 элементов,
+// затем вставить числа 3 и 4
+arr.splice(-1, 0, 3, 4);
+
+console.log( arr )
+
+
+arr = [0,1,2,3,4]
+arr.slice ()
+console.log( arr )
+console.log (arr.slice (1,3))
+console.log( arr.slice (-3) )
+
+console.log( arr.concat ([5,7,9]) )
+
+
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach((element) => console.log(element));
+
+["Бильбо", "Гэндальф", "Назгул"].forEach((item, index, array) => {
+  console.log (`У ${item} индекс ${index} в ${array}`);
+});
+
+let PoiscArr = [ 0,4, true, 0]
+console.log (PoiscArr.indexOf(0))
+console.log (PoiscArr.indexOf(5))
+console.log (PoiscArr.includes(4))
+console.log (PoiscArr.lastIndexOf(0))
+
+
+let users = [
+  {id: 1, name: "Вася", age: 25, country: 'Russia'},
+  {id: 2, name: "Петя", age: 17, country: 'Japan'},
+  {id: 3, name: "Маша", age: 18, country: 'Sweden'}
+];
+
+let people = users.find(item => item.id == 3)
+console.log (people.name, people.country)
+
+
+
+
+
+
+
 
 
 
