@@ -1091,8 +1091,6 @@ let people = users.find(item => item.id == 3)
 console.log (people.name, people.country)
 
 
- 
-
 
 
 
