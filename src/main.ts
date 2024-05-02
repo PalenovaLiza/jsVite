@@ -669,12 +669,12 @@ function transformToCommond(fr1: Fraction, fr2: Fraction) {
   }
 }
 
-function transformToCommond1(n1:number,d1:number,n2:number,d2:number) {
-  console.log(n1*d2,'/',d1*d2)
-  console.log(n2*d1,'/', d1*d2)
+function transformToCommond1(n1: number, d1: number, n2: number, d2: number) {
+  console.log(n1 * d2, '/', d1 * d2)
+  console.log(n2 * d1, '/', d1 * d2)
 }
 
-transformToCommond1(1,2,3,10)
+transformToCommond1(1, 2, 3, 10)
 
 // 1 Функция сложения 2 - х объектов - дробей.
 
@@ -766,29 +766,29 @@ console.log(User.name)
 
 // Создать объект, описывающий автомобиль (производитель,модель, год выпуска, средняя скорость), и следующие функциидля работы с этим объектом.
 type Car = {
-  name:string,
-  age:number,
-  country:string,
-  speed:number,
-  avearage?:number,
+  name: string,
+  age: number,
+  country: string,
+  speed: number,
+  avearage?: number,
 }
 
-let car:Car = {
+let car: Car = {
   name: "Omoda",
   age: 2024,
   country: "China",
   speed: 100,
 }
 //  Функция для вывода на экран информации об автомобиле.
-function getCarInfo(car:Car) {
+function getCarInfo(car: Car) {
   console.log(car.name, car.age, car.country, car.speed)
 }
 getCarInfo(car)
 // Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью.Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 
-function timeDistance(car:Car, distance: number) {
-  const time = distance/car.speed
-  const restTime = time%4==0 ? Math.floor((distance/car.speed)/4)-1 : Math.floor((distance/car.speed)/4)
+function timeDistance(car: Car, distance: number) {
+  const time = distance / car.speed
+  const restTime = time % 4 == 0 ? Math.floor((distance / car.speed) / 4) - 1 : Math.floor((distance / car.speed) / 4)
   return time + restTime
 }
 console.log(timeDistance(car, 800))
@@ -801,11 +801,11 @@ type Bottle = {
   price?: number,
 }
 
-const bottle:Bottle = {
+const bottle: Bottle = {
   liqid: 'h2o',
   vulume: 0.5,
   label: 'Только вода',
-} 
+}
 
 bottle.price = 15
 
@@ -819,50 +819,50 @@ type Time = {
   seconds: number,
 }
 
-const time:Time = {
+const time: Time = {
   hours: 11,
   minutes: 24,
   seconds: 12,
 }
 
-console.log (time)
+console.log(time)
 
 // 1 Функция вывода времени на экран.
-function showTimeInfo(time:Time) {
+function showTimeInfo(time: Time) {
   console.log(time)
 }
 showTimeInfo(time)
 
 // 2 Функция изменения времени на переданное количество секунд.
-function changeSeconds(time:Time, s:number) {
+function changeSeconds(time: Time, s: number) {
   let seconds = time.seconds + s
   // time.seconds = seconds%60
-  time.seconds = seconds>60 ? seconds%60 : seconds
-  let minutes = time.minutes + Math.trunc(seconds/60)
-  time.minutes = minutes%60
-  let hours = time.hours + Math.trunc(minutes/60)
-  time.hours = hours%24
+  time.seconds = seconds > 60 ? seconds % 60 : seconds
+  let minutes = time.minutes + Math.trunc(seconds / 60)
+  time.minutes = minutes % 60
+  let hours = time.hours + Math.trunc(minutes / 60)
+  time.hours = hours % 24
 }
-changeSeconds(time,100)
-console.log (time)
+changeSeconds(time, 100)
+console.log(time)
 
 // 3 Функция изменения времени на переданное количество минут.
-function changeMinutes(time:Time, m:number) {
-  changeSeconds(time, m*60)
+function changeMinutes(time: Time, m: number) {
+  changeSeconds(time, m * 60)
 }
 changeMinutes(time, 5)
-console.log (time)
+console.log(time)
 // 4 Функция изменения времени на переданное количество часов.
-function changeHours(time:Time, h:number) {
-  changeSeconds(time, h*60*60)
+function changeHours(time: Time, h: number) {
+  changeSeconds(time, h * 60 * 60)
 }
 changeHours(time, 5)
-console.log (time)
+console.log(time)
 
 
 
 // Если бы объектов не было :(
-  
+
 // function changeSecondsInTime(hours:number, minutes:number, seconds:number, s:number) {
 //   let tempSeconds = seconds + s
 //   seconds = tempSeconds>60 ? tempSeconds%60 : tempSeconds
@@ -891,23 +891,23 @@ console.log (time)
 
 //Функция для площади круга 
 
-function theAreaOfTheCircle (radius:number) {
+function theAreaOfTheCircle(radius: number) {
   const pi = 3.14
-  let area = Math.trunc(pi*radius**2)
+  let area = Math.trunc(pi * radius ** 2)
   return area
 }
 const CircleArea1 = theAreaOfTheCircle(4)
-console.log (CircleArea1)
+console.log(CircleArea1)
 const CircleArea2 = theAreaOfTheCircle(5)
-console.log (CircleArea2)
+console.log(CircleArea2)
 
 // Создать массив из 10 случайных чисел и написать несколько функций для работы с ним.
-let randomNumber = [4,6,23,57,345,9,87,94,2,6]
+let randomNumber = [4, 6, 23, 57, 345, 9, 87, 94, 2, 6]
 // 1 Функция принимает массив и выводит его на экран.
-function SwowAllRandomNumber (randomNumber:number[]){
-console.log (randomNumber)
-} 
-SwowAllRandomNumber (randomNumber)
+function SwowAllRandomNumber(randomNumber: number[]) {
+  console.log(randomNumber)
+}
+SwowAllRandomNumber(randomNumber)
 
 // 2 Функция принимает массив и выводит только четные элементы.
 // 3 Функция принимает массив и возвращает сумму всех элементов массива.
@@ -919,33 +919,33 @@ SwowAllRandomNumber (randomNumber)
 
 // 1.1.  Написать функцию возвращающюю массив целых чисел от 0 до 10
 
-let integers = [0,1,2,3,4,5,6,7,8,9,10]
-function showIntegers (integers:number[]){
+let integers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function showIntegers(integers: number[]) {
   console.log(integers)
 }
 showIntegers(integers)
 
 //Добавить в функцию параметры опциональные параметры начального и конечного значения массива
 //(если конечный элемент массива не передат, то он больше нечального на 10) . Вызвать функцию несаколько раз
-function generateIntegers (start =0, end = start+ 10){
-return {start,end}
+function generateIntegers(start = 0, end = start + 10) {
+  return { start, end }
 }
-console.log (generateIntegers())
-console.log (generateIntegers(50))
-console.log (generateIntegers(50,100))
+console.log(generateIntegers())
+console.log(generateIntegers(50))
+console.log(generateIntegers(50, 100))
 
 // 1.3*. Написать функцию возвращающюю массив случайных целых чисел. Функция принимает 1 параметр, количество элементов в будущем массиве
 
-const RandomIntegers:number[] = []
-function ShowRandomIntegers (RandomIntegers:number[], length:number) {
-    for (let i=0; i<length; i++) {
-      RandomIntegers.push(Math.floor(Math.random()*10))
-    }
-  } 
-  ShowRandomIntegers(RandomIntegers,5)
-  ShowRandomIntegers(RandomIntegers,20)
+const RandomIntegers: number[] = []
+function ShowRandomIntegers(RandomIntegers: number[], length: number) {
+  for (let i = 0; i < length; i++) {
+    RandomIntegers.push(Math.floor(Math.random() * 10))
+  }
+}
+ShowRandomIntegers(RandomIntegers, 5)
+ShowRandomIntegers(RandomIntegers, 20)
 
-console.log (RandomIntegers)
+console.log(RandomIntegers)
 
 // 2.1. В файле html создать пустой div с произвольным id
 // 2.2. Получить объект div'а в js при помощи метода document.getElementById(ваш id) as HTMLDivElement
@@ -958,7 +958,7 @@ onedivDiv.innerHTML = `
 // 2.4. Написать функцию, которая возвращает текст "Привет, пользователь" или 
 // "Привет, <имяПользователя>" в зависимости от переданных параметров и использовать её в задании 2.3.
 let html = ''
-function hello(name = 'пользователь'){
+function hello(name = 'пользователь') {
   html += `<p> 'Привет,  ${name}'</p>`
   onedivDiv.innerHTML = html
 }
@@ -970,7 +970,7 @@ type Employee = {
   name: string,
   department: string,
   salary: number
-} 
+}
 const employees = [
   { name: 'Федотова Арина Глебовна', department: 'ads', salary: 2100 },
   { name: 'Голикова Мария Филипповна', department: 'prog', salary: 3500 },
@@ -990,61 +990,61 @@ const employees = [
 
 
 
-let names = ['Аркадий','Геннадий','Семён']
-console.log (names[0])
-console.log (names[1])
-console.log (names[2])
+let names = ['Аркадий', 'Геннадий', 'Семён']
+console.log(names[0])
+console.log(names[1])
+console.log(names[2])
 
-names [0] = 'Василий'
-console.log (names)
+names[0] = 'Василий'
+console.log(names)
 
-names [3] = 'Елена'
-console.log (names)
-console.log (names.length)
+names[3] = 'Елена'
+console.log(names)
+console.log(names.length)
 
 let AllArr = [
-  { name: 'Georgiy'},
-   28,
-   {country: 'Russia'}
+  { name: 'Georgiy' },
+  28,
+  { country: 'Russia' }
 ]
 
 console.log(AllArr[0].name)
 console.log(AllArr[1])
-console.log(AllArr.at (-1)) // ! удаляет и возвращает  последний элемент
-AllArr.pop () // ! удаление элемента с конца
-console.log(AllArr)  
+console.log(AllArr.at(-1)) // ! удаляет и возвращает  последний элемент
+AllArr.pop() // ! удаление элемента с конца
+console.log(AllArr)
 AllArr.push(567) // ! добавление элемента в конец
 console.log(AllArr)
-console.log (AllArr.shift()) // удалеление последнего элемента и его возврат
+console.log(AllArr.shift()) // удалеление последнего элемента и его возврат
 AllArr.unshift('Лизавета') // добавление элемента в начало 
 console.log(AllArr)
 
 // Одним из самых старых способов перебора элементов массива является цикл for по цифровым индексам:
-for ( i = 0; i<AllArr.length;i ++){
+for (i = 0; i < AllArr.length; i++) {
   console.log(AllArr[i])
 }
 
 // Но для массивов возможен и другой вариант цикла, for..of:
 
-for ( let el of AllArr){
+for (let el of AllArr) {
   console.log(el)
 }
 
-let styles = ['Джаз','Блюз']
+let styles = ['Джаз', 'Блюз']
 console.log(styles)
-styles.push ('Рок-н-ролл')
+styles.push('Рок-н-ролл')
 console.log(styles)
 styles[Math.floor((styles.length - 1) / 2)] = "Классика"
 console.log(styles)
-console.log (styles.shift())
+console.log(styles.shift())
 console.log(styles)
-styles.unshift('Реп','Регги')
+styles.unshift('Реп', 'Регги')
 console.log(styles)
 
 let IAmStrong = [34, 'Лиза', 'справится ', 'точно', 'знаю']
-IAmStrong.splice (0,1)
+IAmStrong.splice(0, 1)
 console.log(IAmStrong)
-console.log (IAmStrong.splice( 0,2, 'я', 'это '))
+console.log(IAmStrong.splice(0, 2, 'я', 'это '))
 console.log(IAmStrong)
 
 let arr = [1, 2, 5];
@@ -1054,16 +1054,16 @@ let arr = [1, 2, 5];
 // затем вставить числа 3 и 4
 arr.splice(-1, 0, 3, 4);
 
-console.log( arr )
+console.log(arr)
 
 
-arr = [0,1,2,3,4]
-arr.slice ()
-console.log( arr )
-console.log (arr.slice (1,3))
-console.log( arr.slice (-3) )
+arr = [0, 1, 2, 3, 4]
+arr.slice()
+console.log(arr)
+console.log(arr.slice(1, 3))
+console.log(arr.slice(-3))
 
-console.log( arr.concat ([5,7,9]) )
+console.log(arr.concat([5, 7, 9]))
 
 
 const array1 = ['a', 'b', 'c'];
@@ -1071,24 +1071,24 @@ const array1 = ['a', 'b', 'c'];
 array1.forEach((element) => console.log(element));
 
 ["Бильбо", "Гэндальф", "Назгул"].forEach((item, index, array) => {
-  console.log (`У ${item} индекс ${index} в ${array}`);
+  console.log(`У ${item} индекс ${index} в ${array}`);
 });
 
-let PoiscArr = [ 0,4, true, 0]
-console.log (PoiscArr.indexOf(0))
-console.log (PoiscArr.indexOf(5))
-console.log (PoiscArr.includes(4))
-console.log (PoiscArr.lastIndexOf(0))
+let PoiscArr = [0, 4, true, 0]
+console.log(PoiscArr.indexOf(0))
+console.log(PoiscArr.indexOf(5))
+console.log(PoiscArr.includes(4))
+console.log(PoiscArr.lastIndexOf(0))
 
 
 let users = [
-  {id: 1, name: "Вася", age: 25, country: 'Russia'},
-  {id: 2, name: "Петя", age: 17, country: 'Japan'},
-  {id: 3, name: "Маша", age: 18, country: 'Sweden'}
+  { id: 1, name: "Вася", age: 25, country: 'Russia' },
+  { id: 2, name: "Петя", age: 17, country: 'Japan' },
+  { id: 3, name: "Маша", age: 18, country: 'Sweden' }
 ];
 
 let people = users.find(item => item.id == 3)
-console.log (people.name, people.country)
+console.log(people.name, people.country)
 
 //Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:
 //■ поле, хранящее радиус окружности;
@@ -1100,10 +1100,10 @@ console.log (people.name, people.country)
 //Продемонстрировать работу свойств и методов.
 
 class Ring {
-  r:number
-  constructor(r:number) {
+  r: number
+  constructor(r: number) {
     this.r = r;
-  } 
+  }
   get radius() {
     return this.r;
   }
@@ -1126,132 +1126,46 @@ console.log(ring.radius);
 console.log(ring.d);
 console.log(ring.area().toFixed(2));
 console.log(ring.circumference().toFixed(2));
-{
 
-//Реализовать класс, описывающий html элемент.
-//Класс HtmlElement должен содержать внутри себя:
-//■ название тега;
-//■ самозакрывающийся тег или нет;
-//■ текстовое содержимое;
-//■ массив атрибутов;
-//■ массив стилей;
-//■ массив вложенных таких же тегов;
-//■ метод для установки атрибута;
-//■ метод для установки стиля;
-//■ метод для добавления вложенного элемента в конец текущего элемента;
-//■ метод для добавления вложенного элемента в начало текущего элемента;
-//■ метод getHtml(), который возвращает html код в виде строки, включая html код вложенных элементов.
-//С помощью написанного класса реализовать следующий блок
-//и добавить его на страницу с помощью document.write().
-//Обратите внимание. Чтобы получить весь этот html в виде
-//строки должно быть достаточно вызвать метод getHtml только
-//у тега с идентификатором wrapper.
+// Создайте объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут. Временная зона – местная.
 
-class HtmlElement {
-  tag: string
-  isSingle: boolean
-  text: string
-  atributes = [] as any[]
-  styles = [] as any[]
-  elements = [] as HtmlElement[]
-  constructor(tag: string, text='') {
-    const singleArr = ['area','base','br','col','embed','hr','img','input','keygen','link','meta','param','source','track','wbr']
-    this.tag = tag
-    this.text = text
-    this.isSingle = singleArr.includes(tag) ? true : false
-  }
-  setAtribute(name:string, value:string) {
-    this.atributes.push({name, value})
-  }
-  setStyle(name:string, value:string) {
-    this.styles.push({name, value})
-  }
-  prepend(el:HtmlElement) {
-    this.elements.unshift(el)
-  }
-  append(el:HtmlElement) {
-    this.elements.push(el)
-  }
-  getHtml():string {
-    const styles = this.styles.map(el=>el.name+':'+el.value).join(';')
-    const attrCopy = [...this.atributes]
-    if (this.styles.length) {
-      attrCopy.push({ name: 'style', value: styles })
-    }
-    if (this.isSingle) {
-      if (this.text) {
-        attrCopy.push({ name: 'area-label', value: this.text })
-      }
-      const atributes = attrCopy.map(el=>el.name+'="'+el.value+'"').join(' ')
-      return `<${this.tag} ${atributes}>`
-    } else {
-      const atributes = attrCopy.map(el=>el.name+'="'+el.value+'"').join(' ')
-      return `<${this.tag} ${atributes}>${this.text}${this.elements.map(el=>el.getHtml()).join('\n')}</${this.tag}>`
-    }
-  }
+const now = new Date(2012, 1, 20, 3, 12)
+console.log(now)
+
+// Напишите функцию getWeekDay(date), показывающую день недели в коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
+
+function getWeekDay(date: Date) {
+  let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+
+  return days[date.getDay()]
 }
 
-const wrapper = new HtmlElement('div')
-wrapper.setAtribute('id', 'wrapper')
-wrapper.setStyle('display', 'flex')
-const div = new HtmlElement('div')
-div.setStyle('width', '300px')
-div.setStyle('margin', '10px')
-const h3 = new HtmlElement('h3', 'Lorem')
-const img = new HtmlElement('img')
-img.setStyle('width', '100%')
-img.setAtribute('src', '1.gif')
-img.setAtribute('alt', 'Lorem')
-const p = new HtmlElement('p', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla assumenda inventore voluptas natus obcaecati mollitia ad eos adipisci delectus quia odit, earum culpa sunt, molestiae doloribus in explicabo! Illo, harum!')
-p.setStyle('text-align', 'justify')
-const a = new HtmlElement('a', 'More...')
-a.setAtribute('href', 'https://www.lipsum.com/')
-a.setAtribute('target', '_blank')
-p.append(a)
-div.append(img)
-div.append(p)
-div.prepend(h3)
-wrapper.append(div)
-wrapper.append(div)
+let date = new Date(2014, 7, 3)
+console.log(getWeekDay(date))
 
-const heDiv = document.getElementById('he') as HTMLDivElement
-heDiv.innerHTML = wrapper.getHtml()
+// В Европейских странах неделя начинается с понедельника (день номер 1), 
+// затем идёт вторник (номер 2) и так до воскресенья (номер 7). Напишите функцию getLocalDay(date), которая возвращает «европейский» день недели для даты date.
 
-}
+function getLocalDay(date: Date) {
+  let day = date.getDay();
 
-{
-
-// Реализовать класс PrintMachine, которой состоит из:
-// ■ размера шрифта;
-// ■ цвета шрифта;
-// ■ семейства шрифта;
-// ■ метода print(), который принимает текст и печатает его соответствующим шрифтом.
-// Создать объект такого класса и продемонстрировать работу метода.
-
-  const pmDiv = document.getElementById('pm') as HTMLDivElement
-  class PrintMachine {
-    tag:string
-    fSize:string
-    color: string
-    fFamily: string
-    constructor(fSize: string, color: string, fFamily: string, tag = 'p') {
-      this.tag = tag
-      this.fSize = fSize
-      this.color = color
-      this.fFamily = fFamily
-    }
-    print(text:string) {
-      pmDiv.innerHTML += `<${this.tag} style="font-size:${this.fSize};font-family:${this.fFamily}; color: ${this.color}">${text}</${this.tag}>`
-    }
+  if (day == 0) {
+    day = 7;
   }
 
-  PrintMachine
-   const redPM = new PrintMachine('50px', 'red', 'Arial')
-  const blackPM = new PrintMachine('25px', 'black', 'Tahoma', 'h1')
-  redPM.print('Alert')
-   blackPM.print('(tommorow)')
- redPM.print('1 may on nose')
-  blackPM.print('not work')
+  return day;
 }
 
+console.log(getLocalDay(date))
+
+// Напишите функцию getLastDayOfMonth(year, month), возвращающую последнее число месяца. Иногда это 30, 31 или даже февральские 28/29.
+
+function getLastDayOfMonth(year: number, month: number) {
+  let date = new Date(year, month + 1, 0)
+  return date.getDate()
+}
+
+console.log(getLastDayOfMonth(2017, 0))
+console.log(getLastDayOfMonth(2018, 1))
+console.log(getLastDayOfMonth(2024, 1))
 
