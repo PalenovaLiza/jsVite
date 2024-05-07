@@ -1170,6 +1170,6 @@ console.log(getLastDayOfMonth(2018, 1))
 console.log(getLastDayOfMonth(2024, 1))
 
 {
-  let mu = 'ку-ку?'.padStart(8,'мы')
+  let mu = 'ку-ку?'.padStart(9,'мы_')
   console.log(mu)
 }
