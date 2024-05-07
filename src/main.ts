@@ -966,21 +966,21 @@ hello('Гена')
 
 
 // Есть массив объектов
-type Employee = {
-  name: string,
-  department: string,
-  salary: number
-}
-const employees = [
-  { name: 'Федотова Арина Глебовна', department: 'ads', salary: 2100 },
-  { name: 'Голикова Мария Филипповна', department: 'prog', salary: 3500 },
-  { name: 'Панин Александр Германович', department: 'ads', salary: 2100 },
-  { name: 'Романов Эмиль Макарович', department: 'prog', salary: 3100 },
-  { name: 'Смирнов Никита Александрович', department: 'prog', salary: 3800 },
-  { name: 'Александрова Майя Вячеславовна', department: 'prog', salary: 4500 },
-  { name: 'Крылов Богдан Максимович', department: 'disign', salary: 2100 },
-  { name: 'Мухина Айша Константиновна', department: 'disign', salary: 2100 },
-]
+// type Employee = {
+//   name: string,
+//   department: string,
+//   salary: number
+// }
+// const employees = [
+//   { name: 'Федотова Арина Глебовна', department: 'ads', salary: 2100 },
+//   { name: 'Голикова Мария Филипповна', department: 'prog', salary: 3500 },
+//   { name: 'Панин Александр Германович', department: 'ads', salary: 2100 },
+//   { name: 'Романов Эмиль Макарович', department: 'prog', salary: 3100 },
+//   { name: 'Смирнов Никита Александрович', department: 'prog', salary: 3800 },
+//   { name: 'Александрова Майя Вячеславовна', department: 'prog', salary: 4500 },
+//   { name: 'Крылов Богдан Максимович', department: 'disign', salary: 2100 },
+//   { name: 'Мухина Айша Константиновна', department: 'disign', salary: 2100 },
+// ]
 
 // Все функции вызывать несколько раз с разными параметрами
 // 3.1. Создать функцию, принимающую массив работников, и возвращающую массив уникальных отделов (department)
@@ -1008,7 +1008,7 @@ let AllArr = [
   { country: 'Russia' }
 ]
 
-console.log(AllArr[0].name)
+// console.log(AllArr[0].name)
 console.log(AllArr[1])
 console.log(AllArr.at(-1)) // ! удаляет и возвращает  последний элемент
 AllArr.pop() // ! удаление элемента с конца
@@ -1016,7 +1016,7 @@ console.log(AllArr)
 AllArr.push(567) // ! добавление элемента в конец
 console.log(AllArr)
 console.log(AllArr.shift()) // удалеление последнего элемента и его возврат
-AllArr.unshift('Лизавета') // добавление элемента в начало 
+// AllArr.unshift('Лизавета') // добавление элемента в начало 
 console.log(AllArr)
 
 // Одним из самых старых способов перебора элементов массива является цикл for по цифровым индексам:
@@ -1086,9 +1086,10 @@ let users = [
   { id: 2, name: "Петя", age: 17, country: 'Japan' },
   { id: 3, name: "Маша", age: 18, country: 'Sweden' }
 ];
+console.log(users)
 
-let people = users.find(item => item.id == 3)
-console.log(people.name, people.country)
+// let people = users.find(item => item.id == 3)
+// console.log(people.name, people.country)
 
 //Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:
 //■ поле, хранящее радиус окружности;
