@@ -1174,3 +1174,57 @@ console.log(getLastDayOfMonth(2024, 1))
   let mu = 'ку-ку?'.padStart(9, 'мы_')
   console.log(mu)
 }
+
+{
+let  ager = 17
+let massenge =   ager > 16 ? 'good' : 'no good'
+console.log(massenge)
+}
+
+{
+  let name = 'Славик'
+  console.log(`Привет, ${name}`)
+
+}
+
+{
+  const NowYears = 2024
+  let birnofday = 1994
+  let age = NowYears - birnofday
+  console.log(age)
+  }
+  {
+    let a = 6
+    let perimetr = a*4
+    console.log (perimetr)
+  }
+  {
+    let r = 6
+    let pi = 3.14
+    let S = pi*(r*r)
+    console.log (S)
+    }
+  {
+    let rastoyanie = 240
+    let time = 6
+    let scorost = rastoyanie/time
+    console.log (scorost)
+  }
+  {
+    const valute = 0.91975
+    let usd = 30
+    let euro = valute*usd
+    console.log(euro)
+  }
+  {
+    let a= 4
+    let b = 2
+    let c = 3
+    let cba = `Перевернутое число ${c}${b}${a}`
+     console.log (cba)
+}
+{
+  let chislo = 25
+  let massenge =  chislo  % 2 == 0 ? 'Четное' : 'Нeчетное'
+  console.log(massenge)
+}
